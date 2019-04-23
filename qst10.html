@@ -7,8 +7,12 @@
 <body>
     <p id="nome">Kleber</p>
     <p id="sobrenome">Bambam</p>
-    <h1 id="nomeCompleto>"></h1>
+    <h1 id="nomeCompleto"></h1>
     <script>
+            let nome = document.getElementById("nome")
+            let sobrenome = document.getElementById("sobrenome")
+            let nomeCompleto = document.getElementById("nomeCompleto")
+            nomeCompleto.innerText = "Bem vindo " + nome.innerText + " " + sobrenome.innerText + "!"
     </script>
 </body>
 </html>
