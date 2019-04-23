@@ -9,8 +9,8 @@
     <div id="y">5</div>
     <div id="soma"></div>
     <div id="produto"></div>
-    <button id="calcular">Calcular!
-    </button>
+    <button id="calcular">Calcular!</button>
+
     <script>
         let x = document.getElementById("x")
         let y = document.getElementById("y")
@@ -20,6 +20,15 @@
 
         x.contentEditable = true
         y.contentEditable = true
+
+        botao.addEventListener("click", calcula)
+
+        function calcula(){
+            let val_x = parseInt(x.innerText)
+            let val_y = parseInt(y.innerText)
+            soma.innerText = "Soma :" + (val_x+val_y)
+            produto.innerText = "Produto :" + (val_x*val_y)
+        }
     </script>
 </body>
 </html>
