@@ -7,7 +7,11 @@
 <body>
     <div id="interativo">Clique-me!</div>
     <script>
-        
+        let interativo = document.getElementById("interativo")
+        interativo.addEventListener("click", aoClicar)
+        function aoClicar(){
+            interativo.innerText = "Funcionou!"
+        }
     </script>
 </body>
 </html>
