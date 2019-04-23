@@ -10,6 +10,18 @@
     <div id="soma"></div>
     <div id="produto"></div>
     <script>
+        let x = document.getElementById("x")
+        let y = document.getElementById("y")
+        let soma = document.getElementById("soma")
+        let produto = document.getElementById("produto")
+
+        let somaMsg = "A soma de " + x.innerText + " e " + y.innerText + " é "
+        somaMsg += parseInt(x.innerText)+parseInt(y.innerText)
+        soma.innerText = somaMsg
+        
+        let produtoMsg = "O produto de " + x.innerText + " e " + y.innerText + " é "
+        produtoMsg += parseInt(x.innerText)*parseInt(y.innerText)
+        produto.innerText = produtoMsg
     </script>
 </body>
 </html>
