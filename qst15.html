@@ -49,15 +49,26 @@
                 var notaCoberturas = parseFloat(coberturas.innerText)
                 var notaBolos = parseFloat(bolos.innerText)
                 var txtResultado
+                var txtMelhorias = ""
                 media = notaConfeitaria + notaCoberturas + notaBolos
                 media /= 3
-                if(media > 70){
-                    txtResultado = "Parabéns Fulano! Você está aprovado com média "
-                        + media + "!"
+                if(media >= 70){
+                    txtResultado = "Parabéns " + nome.innerText + "! Você está aprovado com média "
+                                    + media.toFixed(1) + "!"
                 } else {
-                    txtResultado = "Você está reprovado com média " + media + "!"
+                    txtResultado = "Você está reprovado com média " + media.toFixed(1) + "!"
                 }
                 resultado.innerText = txtResultado
+                if(notaConfeitaria < 60)
+                    txtMelhorias += nome.innerText + ", considere estudar mais Confeitaria!\n"
+
+                if(notaCoberturas < 60)
+                    txtMelhorias += nome.innerText + ", considere estudar mais Coberturas!\n"
+                
+                if(notaBolos < 60)
+                    txtMelhorias += nome.innerText + ", considere estudar mais Broas e Bolos!"
+
+                melhorias.innerText = txtMelhorias
             }       
         </script>
     </main>
