@@ -42,8 +42,23 @@
                 resultado.innerText = ""
                 melhorias.innerText = ""
             }
-            
-                   
+
+            botaoAvaliar.addEventListener("click", avaliarClick)
+            function avaliarClick(){
+                var notaConfeitaria = parseFloat(confeitaria.innerText)
+                var notaCoberturas = parseFloat(coberturas.innerText)
+                var notaBolos = parseFloat(bolos.innerText)
+                var txtResultado
+                media = notaConfeitaria + notaCoberturas + notaBolos
+                media /= 3
+                if(media > 70){
+                    txtResultado = "Parabéns Fulano! Você está aprovado com média "
+                        + media + "!"
+                } else {
+                    txtResultado = "Você está reprovado com média " + media + "!"
+                }
+                resultado.innerText = txtResultado
+            }       
         </script>
     </main>
 
